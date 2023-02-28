@@ -1,37 +1,33 @@
-## Araştırma Soruları
+Araştırma Soruları
+Şimdi görevi gerçekleştirmek için hazırsınız. Şimdi biraz daha kullandığımız araçları anlama zamanı. Bu dokümanı güncelleyerek, aşağıdaki soruları cevaplayınız. Git'e biraz daha aşina olmaya başladığınızı göreceksiniz.
 
-Şimdi görevi gerçekleştirmek için hazırsınız. Şimdi biraz daha kullandığımız araçları anlama zamanı. Bu dokümanı güncelleyerek, aşağıdaki soruları cevaplayınız. Git'e biraz daha aşina olmaya başladığınızı göreceksiniz. 
-
-Soruları cevaplamak için [GitHub docs](https://docs.github.com/en)'u kullanabilirsiniz. Docs, (ingilizce documentation'ın kısaltılmış halidir) bir programı veya dilin nasıl kullanılacağını anlatan dokümandır. Yazılım dünyasında sıkça kullanılır. Bir yazılımcı olarak zamanınızın büyük çoğunluğu da bu tarz dokümanları okumakla ve üzerinde çalışmakla geçer.
+Soruları cevaplamak için GitHub docs'u kullanabilirsiniz. Docs, (ingilizce documentation'ın kısaltılmış halidir) bir programı veya dilin nasıl kullanılacağını anlatan dokümandır. Yazılım dünyasında sıkça kullanılır. Bir yazılımcı olarak zamanınızın büyük çoğunluğu da bu tarz dokümanları okumakla ve üzerinde çalışmakla geçer.
 
 Eğer aradığınız soruların cevapları GitHub docs'ta yok ise Google'lama becerileriniz size yardımcı olacaktır :)
 
-1. Git nedir?
-Versiyon kontrol sistemidir. Projenin her zaman son haline ulaşmamızı ve güncel tutmamızı sağlayan bir araçtır.
+Git nedir?
+Cevap: Git, dağıtık bir sürüm kontrol sistemi (VCS) olarak bilinen açık kaynaklı bir yazılımdır. Sürüm kontrol sistemi, bir projenin kaynak kodu ve dosyalarının değişikliklerinin takip edilmesini ve yönetilmesini sağlar. Git, özellikle yazılım geliştirme projelerinde kullanılan bir araçtır, ancak diğer proje türleri için de kullanılabilir.
 
-2. Git ile GitHub arasında ne fark var?
-Git, bir versiyon takip yazılımıdır. Lokal olarak bilgisayarda çalışır ve Github olmadan da Git'i kullanabilmek mümkündür.
+Git ile GitHub arasında ne fark var?
+Cevap: Git bir sürüm kontrol sistemi olarak çalışırken, GitHub bir Git depolama hizmetidir ve Git projeleri GitHub üzerinde yönetmek için kullanılabilir.
 
-Github ise Git repository'lerin cloud üzerinde saklandığı online bir servistir. Github'a kayıt olmak gereklidir ve ek fayda olarak da başka kişilerin repository'lerine erişebilir ya da kendi repository'lerimize erişmelerini ve katkı sağlamalarını isteyebiliriz. Online bir servistir ve offline olarak kullanabilmek mümkün değildir.
+Neden bir branch oluşturuyoruz?
+Cevap: Git deposunda branch oluşturmak, mevcut kaynak kodunun veya dosyalarının bir kopyasını oluşturmak ve bu kopya üzerinde değişiklikler yapmak içindir. 
 
-3. Neden bir branch oluşturuyoruz? 
-Kullanıcının  çalıştığı projenin farklı versiyonlarına erişmesini sağlar
+Pull Request'in amacı nedir?
+Cevap: önerilen değişikliklerin doğru ve tutarlı bir şekilde ana branch'e eklenmesini sağlamaktır.
 
-4. Pull Request'in amacı nedir?
-Açık bir projede değişiklik yapılmak isteniyorsa, ilgili proje forklanılır, daha sonra ilgili değişiklikler yapılır. Yapılan değişiklikler hala kendi bilgisayarımzdadır. Asıl projeye aktarılması için pull request atılır.
+Bir Branchten diğerine geçmek için kullanıdığımız KOMUT nedir? Örneğin ADINIZ-SOYADINIZ branch'inde çalıştığınızı hayal edin ve main branch'ine geçmek istiyorsunuz.
+Cevap: git checkout
 
+git fetch, git merge ve git pull arasındaki farklıarı açıklayınız. Bu konutlar ne yapar açıklayınız.
+Cevap:
+Git Fetch: Bu komut, uzak bir depodan güncelleme bilgilerini yerel depoya indirir. Ancak, yerel dosyalar üzerinde herhangi bir değişiklik yapmaz veya birleştirme işlemi yapmaz. Yani, Git Fetch, yerel depodaki dosyaları değiştirmez, sadece uzak depoda mevcut olan son güncelleme bilgilerini yerel depoya getirir.
+Git Merge: Bu komut, bir branch'in başka bir branch ile birleştirilmesi için kullanılır. Yani, farklı iki branch'teki değişikliklerin birleştirilmesini sağlar. Bu komut, yerel dosyalar üzerinde değişiklik yapar ve birleştirme sonucunu kaydeder.
+Git Pull: Bu komut, uzak depodaki güncellemeleri indirir ve yerel depo ile birleştirir. Bu, Git Fetch ve Git Merge komutlarının birleşimidir. Yani, Git Pull, uzak depodaki son güncellemeleri indirir, yerel depoya getirir ve ardından bu güncellemeleri yerel branch'le birleştirir.
 
-5. Bir Branchten diğerine geçmek için kullanıdığımız KOMUT nedir? Örneğin ADINIZ-SOYADINIZ branch'inde çalıştığınızı hayal edin ve main branch'ine geçmek istiyorsunuz.
--b
+Merge conflict nedir?
+Git'in birleştirme işlemi sırasında karşılaştığı bir sorundur. Bu sorun, iki veya daha fazla branch'in aynı dosyayı değiştirmesi ve birleştirme işleminin bu değişiklikleri nasıl birleştireceğine karar verememesi durumunda ortaya çıkar.
 
-6. `git fetch`, `git merge` ve `git pull` arasındaki farklıarı açıklayınız. Bu konutlar ne yapar açıklayınız.
-git fetch:
-git merge: herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir
-git pull:başkaları Remote Repo’da değişiklikler yapmış olabilir önce değişiklikleri alıp sonrasında kendi değişikliklerimizi yapmamızı sağlar.
-
-
-7. Merge conflict nedir?
-İki kişi aynı dosyayı ve aynı satırı değiştirirse ve git otomatik olarak merge edemezse bu durumda conflict yani çakışma olması.
-
-8. Merge conflict'i nasıl çözeriz?
-Bu durumda çakışma yaşayan kişi gerekirse ekipteki diğer kişi ile beraber oturup çakışmayı çözdükten sonra merge işlemine devam etmeli.
+Merge conflict'i nasıl çözeriz?
+Merge conflict, birleştirme işlemi sırasında Git tarafından otomatik olarak tespit edilir ve kullanıcılara, birleştirme işleminin nasıl tamamlanacağına karar vermeleri için yardımcı olacak mesajlar verilir. Kullanıcılar, çakışan değişiklikleri düzenleyebilir, belirli değişiklikleri veya tüm değişiklikleri kabul edebilir veya reddedebilir. Sonrasında, birleştirme işlemi tamamlanabilir ve birleştirilmiş dosya kullanılabilir hale gelir.
